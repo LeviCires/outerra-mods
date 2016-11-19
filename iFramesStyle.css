@@ -1,0 +1,273 @@
+/*---------------------Video Gallery---------------------*/
+::-webkit-scrollbar
+{width: 8px; height: 8px;}
+
+::-webkit-scrollbar-track
+{background: #3f3f3f;}
+
+::-webkit-scrollbar-thumb
+{background: #636363;}
+
+
+.ddvideoGallery{
+	width: 100%;
+}
+
+.ddvideoGallery *{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.videoWrapper{
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.videoNav{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	background: #222; /* background of navigation strip */
+}
+
+.videoNav ul{
+	list-style: none;
+	margin: 5px 0;
+	position: relative;
+	width: auto;
+	padding: 0;
+	overflow: auto;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.videoNav ul li{
+	display: inline;
+	margin-right: 5px; /* margin between thumbnails */
+}
+
+.videoNav ul li img{
+	max-width: 90px;
+	width: 20%; /* 80px */
+	height: auto; /* 50px */
+	position: relative;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: all .5s;
+}
+
+.videoNav ul li img:hover, .videoNav ul li img.selected{
+	border: 1px solid #ccc;
+}
+
+/*---------------------File Viewer---------------------*/
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 50px
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.modal-header {
+    padding: 1px 15px;
+    background-color: #0088CB;
+    color: white
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 0px solid #888;
+    width: 500px;
+	height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal-body {
+    border: 0px;
+	padding: 0px;
+	margin: 0px;
+    height: 500px;
+    width: 100%
+}
+
+.modal-footer {
+	padding: 10px;
+	display: block;
+	background: #0088CB
+}
+
+/*---------------------Buttons---------------------*/
+.icon {
+	display: inline;
+	cursor: pointer;
+	position: relative;
+	vertical-align:middle;
+	border: none;
+	padding: 0px;
+	margin-bottom:2.2px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+	display: inline;
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+	font: normal 13px/normal "Arial", Sans-serif;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	background-color: #0088CB;
+	-webkit-transition: background-color 200ms;
+	-moz-transition: background-color 200ms;
+	-o-transition: background-color 200ms;
+	transition: background-color 200ms;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+	color: #444444;
+    background-color: #7FCCFF;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+	width:325.5px;
+    min-width: 100%;
+	left:-145.5px;
+	font: normal 12px/normal "Arial", Sans-serif;
+	font-weight: bold;
+}
+
+.dropdown-content a {
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*---------------------Extra---------------------*/
+.description_box{
+	font: normal 13px/normal "Arial", Sans-serif;
+	color: white;
+	text-indent: 15px;
+	text-align: justify;
+	font-style: italic;
+	background: rgba(0, 0, 0, 0.5);
+	width:638px;
+	padding:10px;
+	margin-top: -35px;
+	margin-bottom: 5px;
+}
+
+.text{ /*Photo and Video Gallery*/
+	text-align:center;
+	background:#222;
+	color:white;
+	margin:0px;
+	padding:10px;
+	font: normal 20px/normal "Arial", Sans-serif;
+	font-weight: bold
+}
+
+.buttons{
+	align: right;
+	/*margin-bottom:100px;*/
+}
+
+.items {
+	width:73%;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+	cursor:pointer;
+	font: normal 12px/normal "Arial", Sans-serif;
+	font-weight: bold;
+	background: rgba(240, 240, 240, 0.95);
+}
+
+.items:hover {
+	background: rgba(100, 100, 100, 0.95);
+	color: white;
+}
+
+.details{
+	margin:0px;
+	font-weight: normal;
+}
+
+.view{
+	width:13.6px;
+	background: url('http://i.imgur.com/w7bh2sa.png') no-repeat;
+	background-color: #0088CB;
+	background-size:20x;
+	background-position: center;
+}
+
+.view:hover {
+	background: url('http://i.imgur.com/bvu5tYu.png') no-repeat;
+	background-color: #7FCCFF;
+	background-size:20px;
+	background-position: center;
+}
